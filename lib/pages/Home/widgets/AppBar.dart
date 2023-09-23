@@ -10,7 +10,7 @@ class AppBarHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsetsDirectional.symmetric(horizontal: 16,vertical: 70),
+      padding:  EdgeInsetsDirectional.symmetric(horizontal: 8,vertical: MediaQuery.sizeOf(context).height*0.05),
       child: const Row(
         children: [
           Image(image: AssetImage(ManagerAssets.group_splash,),height: 16,),
