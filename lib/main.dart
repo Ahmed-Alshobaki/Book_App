@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:bloc/bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,8 +22,8 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
         providers: [BlocProvider(create: (context) => HomeCubit())],
         child: GetMaterialApp(
-          theme: ThemeData.dark()
-              .copyWith(scaffoldBackgroundColor: ManagerColors.primaryColor),
+          theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: ManagerColors.primaryColor,textTheme: GoogleFonts.aBeeZeeTextTheme(ThemeData.dark().textTheme),),
+
           debugShowCheckedModeBanner: false,
           getPages: Pages.getPages,
           initialRoute: ManagerRoutes.Home,
