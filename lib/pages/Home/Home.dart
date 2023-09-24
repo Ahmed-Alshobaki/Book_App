@@ -3,11 +3,13 @@ import 'package:book_app/core/constant/resources/Manager_Style.dart';
 import 'package:book_app/core/constant/resources/manager_assets.dart';
 import 'package:book_app/core/constant/resources/manager_colors.dart';
 import 'package:book_app/core/constant/resources/manager_fonts.dart';
+import 'package:book_app/pages/Home/Home.dart';
 import 'package:book_app/pages/Home/widgets/AppBar.dart';
+import 'package:book_app/pages/Home/widgets/BestSellerItam.dart';
 import 'package:book_app/pages/Home/widgets/itamList.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -47,7 +49,12 @@ class _HomeState extends State<Home> {
               style: ManagerStyles.textstyle20_w700
             ),
             SizedBox(height: 20,),
-            BestSellerItam()
+            Expanded(
+              child: ListView.builder(padding: EdgeInsets.zero,itemCount: 10,itemBuilder: (context,i){
+                return const Padding(padding: EdgeInsets.only(bottom: 15),
+                child: BestSellerItam());
+              }),
+            )
           ],
         ),
       ),
@@ -55,37 +62,4 @@ class _HomeState extends State<Home> {
   }
 }
 
-class BestSellerItam extends StatelessWidget {
-  const BestSellerItam({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(
-          height: 135,
-          child: AspectRatio(
-            aspectRatio: 2.5/4,
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: const Color(0xffFEBDA6),
-                  image: const DecorationImage(image: AssetImage(ManagerAssets.test1))),
-
-            ),
-          ),
-        ),
-        const SizedBox(width: 30,),
-        Container(
-          margin: EdgeInsetsDirectional.only(top: 3),
-          width: 170,
-          child: const Text("Harry Potter and the Goblet of Fire",style:  ManagerStyles.textstyle20,
-            overflow:TextOverflow.ellipsis ,
-            maxLines: 2,
-          ),
-        )
-      ],
-    );
-  }
-}
