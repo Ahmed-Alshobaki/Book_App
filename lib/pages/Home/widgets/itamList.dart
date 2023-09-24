@@ -16,7 +16,7 @@ class itamList extends StatelessWidget {
         child: Container(
           margin: EdgeInsetsDirectional.only(end: 12),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(8),
               color: const Color(0xffFEBDA6),
               image: const DecorationImage(image: AssetImage(ManagerAssets.test1),fit: BoxFit.fill)
           ),
