@@ -1,4 +1,4 @@
-import 'package:get/get.dart';
+
 import 'package:path/path.dart';
 
 class ManagerFont {

@@ -3,8 +3,8 @@ import 'package:book_app/core/constant/resources/manager_routes.dart';
 import 'package:book_app/core/constant/resources/manager_time.dart';
 import 'package:book_app/pages/Home/Home.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
+import 'package:go_router/go_router.dart';
+
 
 class SplashBody extends StatefulWidget {
   const SplashBody({super.key});
@@ -20,7 +20,7 @@ class _SplashBodyState extends State<SplashBody> with SingleTickerProviderStateM
   void initState() {
     InitSlideAnimated();
     Future.delayed(const Duration(seconds: ManagerTime.s3),(){
-      Get.off(()=>const Home(),transition: Transition.fade);
+      GoRouter.of(context).pushReplacement(ManagerRoutes.Home);
     });
     super.initState();
 
