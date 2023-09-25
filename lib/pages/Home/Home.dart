@@ -10,6 +10,7 @@ import 'package:book_app/pages/Home/widgets/itamList.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -26,40 +27,52 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: EdgeInsetsDirectional.only(start: 16, top: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const AppBarHome(),
-            SizedBox(
-              height: MediaQuery.sizeOf(context).height * .30,
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 5,
-                  itemBuilder: (context, i) {
-                    return const itamList();
-                  }),
+      body:
+      CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const AppBarHome(),
+                  SizedBox(
+                    height: MediaQuery.sizeOf(context).height * .30,
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 5,
+                        itemBuilder: (context, i) {
+                          return const itamList();
+                        }),
+                  ),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  Container(
+                    margin: EdgeInsetsDirectional.only(start: 10),
+                    child: const Text("Best Seller",
+                        style: ManagerStyles.textstyle20_w700),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                ],
+              ),
             ),
-            const SizedBox(
-              height: 40,
-            ),
-             const Text(
-              "Best Seller",
-              style: ManagerStyles.textstyle20_w700
-            ),
-            SizedBox(height: 20,),
-            Expanded(
-              child: ListView.builder(padding: EdgeInsets.zero,itemCount: 10,itemBuilder: (context,i){
-                return const Padding(padding: EdgeInsets.only(bottom: 15),
-                child: BestSellerItam());
-              }),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                    (BuildContext context, int i) {
+                  return const Padding(
+                    padding: EdgeInsetsDirectional.only(start: 10,bottom:10),
+                    child: BestSellerItam(),
+                  );
+                },
+                childCount: 10,
+              ),
+
             )
           ],
         ),
-      ),
+
     );
   }
 }
-
-
