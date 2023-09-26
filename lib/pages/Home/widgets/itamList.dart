@@ -14,7 +14,7 @@ class itamList extends StatelessWidget {
       child: SizedBox(
         height: MediaQuery.sizeOf(context).height*.30,
         child: Container(
-          margin: EdgeInsetsDirectional.only(end: 12),
+          margin: const EdgeInsetsDirectional.only(end: 12),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: const Color(0xffFEBDA6),
