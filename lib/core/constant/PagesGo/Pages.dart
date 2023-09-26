@@ -1,5 +1,6 @@
 
 import 'package:book_app/core/constant/resources/manager_routes.dart';
+import 'package:book_app/pages/Detalis/detalis.dart';
 import 'package:book_app/pages/Home/Home.dart';
 import 'package:book_app/pages/Splash/SplashView.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,13 @@ class Pages {
           return const Home();
         },
       ),
+      GoRoute(
+        path: ManagerRoutes.DetalisBook,
+        builder: (BuildContext context, GoRouterState state) {
+          return const DetalisBook();
+        },
+      ),
+
     ],
   );
 }
