@@ -1,5 +1,6 @@
 import 'package:book_app/core/constant/resources/manager_colors.dart';
 import 'package:book_app/pages/Detalis/widget/Detalis_Appbar.dart';
+import 'package:book_app/pages/Home/widgets/itamList.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +27,20 @@ class DetalisBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    var width  =MediaQuery.of(context).size.width;
+    var height  =MediaQuery.of(context).size.height;
+    return Column(
+      children: [
+        Padding(
+            padding:  EdgeInsets.symmetric(horizontal:width*0.25),
+          child: itamList(),
+
+    ),
+
+
+
+
+      ],
+    );
   }
 }
