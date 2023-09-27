@@ -1,6 +1,7 @@
 import 'package:book_app/core/constant/resources/Manager_Style.dart';
 import 'package:book_app/core/constant/resources/manager_assets.dart';
 import 'package:book_app/core/constant/resources/manager_routes.dart';
+import 'package:book_app/pages/Detalis/widget/rating.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
@@ -59,12 +60,7 @@ class BestSellerItam extends StatelessWidget {
                     width: 120,
                     child: Text("19.99 €",style:  ManagerStyles.textstyle20_w700 ),
                   ),
-                  const Icon(FontAwesomeIcons.solidStar,color: Color(0xffDEF30E),size: 20,),
-                  const SizedBox(width: 7,),
-                  const Text("4.8",style:  ManagerStyles.textstyle16),
-                  const SizedBox(width: 2,),
-                  Text("(2255)",style:  ManagerStyles.textstyle14_w300.copyWith(color:Colors.white54 )),
-
+                  Rating(mainAxisAlignment: MainAxisAlignment.start,)
 
                 ],)
               ],

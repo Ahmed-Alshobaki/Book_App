@@ -1,5 +1,6 @@
 import 'package:book_app/core/constant/resources/Manager_Style.dart';
 import 'package:book_app/core/constant/resources/manager_fonts.dart';
+import 'package:book_app/pages/Detalis/widget/rating.dart';
 import 'package:book_app/pages/Home/widgets/itamList.dart';
 import 'package:flutter/material.dart';
 
@@ -18,9 +19,11 @@ class DetalisBody extends StatelessWidget {
         ),
         const SizedBox(height: 30,),
         const Text("The Jungle Book",style:TextStyle(fontSize: 30,fontFamily: ManagerFont.GT,fontWeight: FontWeight.w900)),
-        const SizedBox(height: 8,),
+        const SizedBox(height: 5,),
         const Opacity(opacity: 0.7,
         child: Text("Rudyard Kipling",style: TextStyle(fontSize: 17,fontWeight: FontWeight.w400,fontStyle: FontStyle.italic),)),
+        SizedBox(height: 7,),
+        Rating(mainAxisAlignment: MainAxisAlignment.center,)
       ],
     );
   }
