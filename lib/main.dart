@@ -22,18 +22,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
+
         providers: [BlocProvider(create: (context) => HomeCubit())],
         child: MaterialApp.router(
+
           routerConfig: Pages.router,
           theme: ThemeData.dark().copyWith(
             primaryColor: ManagerColors.primaryColor,
             scaffoldBackgroundColor: ManagerColors.primaryColor,
             textTheme: GoogleFonts.aBeeZeeTextTheme(ThemeData.dark().textTheme,),
           ),
-
           debugShowCheckedModeBanner: false,
 
-          //initialRoute: ManagerRoutes.Home,
+
         ));
   }
 }

@@ -12,7 +12,7 @@ class Pages {
   static final  GoRouter router = GoRouter(
     routes: <RouteBase>[
       GoRoute(
-        path: '/',
+        path: '/ss',
         builder: (BuildContext context, GoRouterState state) {
           return const SplashView();
         },
@@ -24,7 +24,7 @@ class Pages {
         },
       ),
       GoRoute(
-        path: ManagerRoutes.DetalisBook,
+        path:"/",
         builder: (BuildContext context, GoRouterState state) {
           return const DetalisBook();
         },
