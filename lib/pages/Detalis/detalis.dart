@@ -17,7 +17,7 @@ class DetalisBook extends StatelessWidget {
         leading: IconButton(onPressed: () {  }, icon: const Icon(Icons.close),),
         actions: [IconButton(onPressed: () {  }, icon: const Icon(Icons.shopping_cart),),],
       ),
-      body:const DetalisBody() ,
+      body: DetalisBody() ,
     );
   }
 }
