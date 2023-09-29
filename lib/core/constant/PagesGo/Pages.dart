@@ -3,6 +3,7 @@ import 'package:book_app/core/constant/resources/manager_routes.dart';
 import 'package:book_app/pages/Detalis/detalis.dart';
 import 'package:book_app/pages/Home/Home.dart';
 import 'package:book_app/pages/Splash/SplashView.dart';
+import 'package:book_app/pages/search/search_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,7 +13,7 @@ class Pages {
   static final  GoRouter router = GoRouter(
     routes: <RouteBase>[
       GoRoute(
-        path: '/ss',
+        path: '/',
         builder: (BuildContext context, GoRouterState state) {
           return const SplashView();
         },
@@ -24,12 +25,17 @@ class Pages {
         },
       ),
       GoRoute(
-        path:"/",
+        path:ManagerRoutes.DetalisBook,
         builder: (BuildContext context, GoRouterState state) {
           return const DetalisBook();
         },
       ),
-
+      GoRoute(
+        path:ManagerRoutes.Search,
+        builder: (BuildContext context, GoRouterState state) {
+          return const Search();
+        },
+      ),
     ],
   );
 }
