@@ -13,7 +13,7 @@ class BestSellerItam extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        GoRouter.of(context).push(ManagerRoutes.DetalisBook);
+        GoRouter.of(context).pushReplacement(ManagerRoutes.DetalisBook);
       },
       child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +37,7 @@ class BestSellerItam extends StatelessWidget {
               children: [
                 const SizedBox(height: 4,),
                 Container(
-                  margin: EdgeInsetsDirectional.only(top: 3),
+                  margin: const EdgeInsetsDirectional.only(top: 3),
                   width: 170,
                   child: const Text("Harry Potter and the Goblet of Fire",style:  ManagerStyles.textstyle20,
                     overflow:TextOverflow.ellipsis ,
@@ -46,7 +46,7 @@ class BestSellerItam extends StatelessWidget {
                 ),
                 const SizedBox(height: 4,),
                 Container(
-                  margin: EdgeInsetsDirectional.only(top: 3),
+                  margin: const EdgeInsetsDirectional.only(top: 3),
                   width: 120,
                   child: Text("J.K. Rowling",style:  ManagerStyles.textstyle14.copyWith(color:Colors.white54 ),
                     overflow:TextOverflow.ellipsis ,
@@ -56,9 +56,9 @@ class BestSellerItam extends StatelessWidget {
                 const SizedBox(height: 4,),
                 Row(children: [
                   Container(
-                    margin: EdgeInsetsDirectional.only(top: 3),
+                    margin: const EdgeInsetsDirectional.only(top: 3),
                     width: 120,
-                    child: Text("19.99 €",style:  ManagerStyles.textstyle20_w700 ),
+                    child: const Text("19.99 €",style:  ManagerStyles.textstyle20_w700 ),
                   ),
                   Rating(mainAxisAlignment: MainAxisAlignment.start,)
 
