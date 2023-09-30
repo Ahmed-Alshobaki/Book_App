@@ -25,7 +25,6 @@ class MyApp extends StatelessWidget {
 
         providers: [BlocProvider(create: (context) => HomeCubit())],
         child: MaterialApp.router(
-
           routerConfig: Pages.router,
           theme: ThemeData.dark().copyWith(
             primaryColor: ManagerColors.primaryColor,
