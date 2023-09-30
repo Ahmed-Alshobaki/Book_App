@@ -14,12 +14,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bloc/bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main() {
+void main()async {
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const MyApp());
   ApiService apiService = ApiService();
  print( apiService.getBooks(endurl: "volumes?Filtering=free-ebooks&q=n"));
+
+
 
 }
 
