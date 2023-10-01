@@ -1,7 +1,9 @@
 
 
-import 'package:book_app/Featuser/ApiService/ApiService.dart';
-import 'package:book_app/controller/Home-cubit/home_cubit.dart';
+
+import 'package:book_app/Featusr/ApiService/ApiService.dart';
+import 'package:book_app/controller/Home-cubit/Home/home_cubit.dart';
+
 import 'package:book_app/core/constant/PagesGo/Pages.dart';
 
 import 'package:book_app/core/constant/resources/manager_colors.dart';
@@ -10,9 +12,9 @@ import 'package:book_app/pages/Home/Home.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'package:bloc/bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+
 
 void main()async {
   WidgetsFlutterBinding.ensureInitialized();
