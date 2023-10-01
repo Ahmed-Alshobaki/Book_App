@@ -5,5 +5,13 @@ abstract class FeatureBookState {}
 
 class FeaturedBookInitial extends FeatureBookState {}
 class FeaturedBookLoaging extends FeatureBookState {}
-class FeatureBookSuccess extends FeatureBookState {}
-class FeatureBookFailure extends FeatureBookState {}
+class FeatureBookSuccess extends FeatureBookState {
+  List<Model> ListBook= [];
+
+  FeatureBookSuccess(this.ListBook);
+}
+class FeatureBookFailure extends FeatureBookState {
+  late final String message ;
+
+  FeatureBookFailure(this.message);
+}
