@@ -7,7 +7,7 @@ import 'package:meta/meta.dart';
 part 'fetch_new_book_state.dart';
 
 class FetchNewBookCubit extends Cubit<FetchNewBookState> {
-  FetchNewBookCubit(this.homeRepo) : super(FetchNewBookInitial());
+  FetchNewBookCubit({required this.homeRepo}) : super(FetchNewBookInitial());
   HomeRepo homeRepo;
 
   Fetch_books ()async{

@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:book_app/Featusr/ApiService/ApiService.dart';
 import 'package:book_app/Featusr/HomeRepo/Repo.dart';
 import 'package:book_app/Featusr/model/model.dart';
 import 'package:meta/meta.dart';
@@ -6,7 +7,7 @@ import 'package:meta/meta.dart';
 part 'featusered_book_state.dart';
 
 class FeatuseBookCubit extends Cubit<FeatureBookState> {
-  FeatuseBookCubit(this.home) : super(FeaturedBookInitial());
+  FeatuseBookCubit( {required this.home}) : super(FeaturedBookInitial());
    final HomeRepo home;
 
    void fetchBook()async{

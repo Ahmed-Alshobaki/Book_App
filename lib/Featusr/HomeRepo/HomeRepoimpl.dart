@@ -8,13 +8,12 @@ import 'package:dartz/dartz_unsafe.dart';
 import 'package:dio/dio.dart';
 
 class HomeRepoImpl implements HomeRepo {
-  
-
+  HomeRepoImpl({required this.service});
+  late ApiService service ;
 
   @override
   Future<Either<Faliure, List<Model>>> fetchNewBook() async {
     try {
-      ApiService service = ApiService();
       var dataBook = await service.getBooks(
           endurl:
           "volumes?Filtering=free-ebooks&q=subject:programming&Sorting=newest");
@@ -37,7 +36,6 @@ class HomeRepoImpl implements HomeRepo {
   @override
   Future<Either<Faliure, List<Model>>> FetchFeatuseredBook()async {
     try {
-      ApiService service = ApiService();
       var dataBook = await service.getBooks(
           endurl:
           "volumes?Filtering=free-ebooks&q=subject:programming");
@@ -56,4 +54,6 @@ class HomeRepoImpl implements HomeRepo {
       return left(Faliure("opssss"));
     }
   }
+
+
 }
